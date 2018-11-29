@@ -1,0 +1,163 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+  background-image: 
+  linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+  url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.main-weather-block {
+  margin: 0 auto;
+  width: 37%;
+
+  @media only screen and (max-width: 64em) {
+    width: 55%;
+  }
+
+  @media only screen and (max-width: 38em) {
+    width: 99%;
+  }
+
+  header {
+    text-align: center;
+
+    .heading {
+      font-size: 22px;
+      padding: 25px 0 0 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .search-block {
+    text-align: center;
+
+    .error-msg {
+      display: none;
+    }
+
+    section.main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+
+      input {
+        font-size: 13px;
+        padding: 10px;
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.2);
+        border: none;
+        color: #fff;
+        width: 230px;
+        text-transform: uppercase;
+
+        &::placeholder {
+          color: #fff;
+        }
+
+        &:focus {
+          &::placeholder {
+            color: transparent;
+          }
+          background: rgba(100, 100, 100, 0.1);
+        }
+
+        &.search {
+          width: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &.error-search {
+      section.main {
+        input {
+          background: rgba(153, 6, 6, 0.4);
+        }
+      }
+
+      .error-msg {
+        display: block;
+        color: #990606;
+        padding: 0 0 30px 0;
+      }
+    }
+  }
+
+  .weather-info-blocks {
+    width: 100%;
+
+    .forecast-tile {
+      min-height: 130px;
+      margin: 3px;
+      overflow: hidden;
+      position: relative;
+        
+      .days-of-week {
+        text-transform: uppercase;
+        font-weight:bold;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        font-size: 15px;
+
+      }
+      .icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        flex-direction: column;
+
+        font-size: 12px;
+      }
+  .info-block {
+        padding: 0 0 0 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+
+        .temp {
+          padding: 10px 10px;
+          font-size: 18px;
+          color: #696cff;
+          font-weight: bold;
+
+        .temp, strong{
+          color:red;
+        }
+          strong {
+            color: #fff;
+          }
+        }
+
+        .pressure {
+          padding: 0 10px;
+          font-size: 15px;
+        }
+      }
+
+      .main-info {
+        display: flex;
+      }
+      }
+
+  }
+}
